@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10251c">
+  <meta name="description" content="Find A.S. Pool & Snooker Club locations across Ahmedabad and Gujarat. Explore the clubs, find directions, and get in touch before your next game.">
+  <meta property="og:title" content="A.S. Pool & Snooker Club | Your next game starts here">
+  <meta property="og:description" content="Find your nearest A.S. Pool & Snooker Club. Explore locations, photos and directions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero-hall.webp">
+  <title>A.S. Pool & Snooker Club | Find your club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzxTGKn6uZbmxOyl5lEGwY2s7g=" crossorigin="">
+  <link rel="preload" as="image" href="assets/images/hero-hall.webp">
+  <link rel="stylesheet" href="assets/site.css">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script defer src="data/locations.js"></script>
+  <script defer src="assets/site.js"></script>
+  <script defer src="assets/break-cinematic.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="A.S. Pool and Snooker Club home">
+        <span class="brand-symbol" aria-hidden="true"><span class="brand-ball">8</span></span>
+        <span class="brand-name">A.S. <strong>POOL & SNOOKER</strong><small>CLUB</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#about">The experience</a>
+        <a href="#locations">Locations</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="button button-small button-accent desktop-cta" href="#locations">Find a club <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#about">The experience</a><a href="#locations">Locations</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/images/hero-hall.webp" alt="Green snooker tables and overhead lamps inside a club" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> A.S. POOL & SNOOKER CLUB</p>
+          <h1 id="hero-title">Good games.<br><em>Great company.</em></h1>
+          <p class="hero-description">Your next frame, your regular table, or a friendly game with friends. Find your nearest A.S. club across Ahmedabad and Gujarat.</p>
+          <div class="hero-actions">
+            <a href="#locations" class="button button-accent">Explore locations <span aria-hidden="true">↗</span></a>
+            <a href="#gallery" class="button button-ghost">Take a look inside <span aria-hidden="true">↘</span></a>
+          </div>
+          <div class="hero-proof"><span class="proof-number">13</span><span>clubs to explore<br><small>Ahmedabad & across Gujarat</small></span></div>
+        </div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span>13 LOCATIONS</span></div>
+    </section>
+
+    <section class="intro-strip" aria-label="Club introduction">
+      <div class="container intro-strip-inner"><span>YOUR LOCAL TABLE IS WAITING</span><span aria-hidden="true" class="strip-eight">8</span><span>SNOOKER <i>·</i> POOL <i>·</i> GOOD COMPANY</span></div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> MORE THAN A GAME</p>
+            <h2 id="about-title" class="section-title">Your spot to<br><em>play, unwind, repeat.</em></h2>
+            <p>From after-work frames to long weekend sessions, A.S. Pool & Snooker Club brings people together around the table. Whether you're practicing your break or just enjoying a game with friends, there's a place for you.</p>
+            <div class="about-points">
+              <div class="about-point"><span class="point-index">01</span><div><strong>Snooker & pool</strong><small>Discover which games are available at your nearest location.</small></div></div>
+              <div class="about-point"><span class="point-index">02</span><div><strong>Places worth returning to</strong><small>Find the atmosphere and location that feels right for your next session.</small></div></div>
+              <div class="about-point"><span class="point-index">03</span><div><strong>Easy to find, easy to visit</strong><small>Every club listing has directions and a direct contact option.</small></div></div>
+            </div>
+            <a class="text-link" href="#locations">See all locations <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="about-media">
+            <figure class="about-main-photo"><img loading="lazy" src="assets/images/hall-cream.webp" alt="Multiple snooker tables inside a bright club"><figcaption>THE GAME IS ON <span>— A.S. CLUB</span></figcaption></figure>
+            <figure class="about-detail-photo"><img loading="lazy" src="assets/images/pool-balls.webp" alt="Colorful pool balls arranged on green felt"></figure>
+            <div class="about-photo-badge">Made for<br><strong>your next frame.</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="break-section" id="break-experience" aria-labelledby="break-title">
+      <div class="container break-layout">
+        <div class="break-copy">
+          <p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> ANOTHER WAY TO EXPLORE</p>
+          <h2 id="break-title">One break.<br><em>Thirteen places to play.</em></h2>
+          <p>Make the opening shot and discover your next table. It's a little bit of the game, right here on the site.</p>
+          <div class="break-actions">
+            <button id="break-trigger" type="button" class="button button-accent">Take your shot <span aria-hidden="true">↗</span></button>
+            <button id="break-skip" type="button" class="break-link">Just show locations</button>
+            <button id="break-reset" type="button" class="break-link" hidden>Play again ↺</button>
+          </div>
+          <p class="break-access-note">Optional · No sound · The regular directory is right below.</p>
+        </div>
+        <div class="break-play" id="break-play">
+          <div class="break-stage" id="break-stage" aria-label="Cinematic interactive pool break">
+            <canvas id="break-canvas" aria-hidden="true"></canvas>
+            <button class="break-poster" id="break-photo-trigger" type="button" aria-label="Take your shot: watch the cue ball break the rack and reveal locations">
+              <img src="assets/images/break-eight.webp" alt="" loading="eager" decoding="async">
+              <span class="break-poster-shade" aria-hidden="true"></span>
+              <span class="break-poster-brand" aria-hidden="true">A.S. POOL &amp; SNOOKER</span>
+              <span class="break-poster-action" aria-hidden="true"><span class="break-play-icon">↗</span><strong>TAP TO BREAK</strong><small>13 CLUBS TO DISCOVER</small></span>
+              <span class="break-poster-foot" aria-hidden="true">THE NEXT SHOT IS YOURS</span>
+            </button>
+            <span class="break-stage-note" id="break-stage-note" aria-hidden="true">THE BREAK · IN MOTION</span>
+          </div>
+          <div id="break-results" class="break-results" hidden aria-label="Choose from the thirteen club locations">
+            <div class="break-results-heading"><strong>Where will you play?</strong><span>Choose a location to see photos and directions</span></div>
+            <div id="break-results-grid" class="break-results-grid"></div>
+          </div>
+          <p class="sr-only" id="break-live-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section locations-section" id="locations" aria-labelledby="locations-title">
+      <div class="container">
+        <div class="section-head locations-head">
+          <div><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> YOUR NEXT GAME STARTS HERE</p><h2 class="section-title section-title-light" id="locations-title">Find your <em>club.</em></h2><p>Browse the 13 branches from the A.S. club directory, find a venue near you, and open directions in one tap.</p></div>
+          <span class="directory-count"><b id="location-count">13</b><span>club listings<br>across Gujarat</span></span>
+        </div>
+        <div class="location-tools">
+          <label class="search-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7.5"></circle><path d="m16.6 16.6 5 5"></path></svg><span class="sr-only">Search clubs by area or city</span><input type="search" id="location-search" placeholder="Search an area, city or club…" autocomplete="off"></label>
+          <div id="location-filters" class="filter-pills" role="group" aria-label="Filter locations by city">
+            <button type="button" data-filter="all" class="filter-pill is-active" aria-pressed="true">All <span>13</span></button>
+            <button type="button" data-filter="Ahmedabad" class="filter-pill" aria-pressed="false">Ahmedabad</button>
+            <button type="button" data-filter="Gandhinagar" class="filter-pill" aria-pressed="false">Gandhinagar</button>
+            <button type="button" data-filter="Anand" class="filter-pill" aria-pressed="false">Anand</button>
+            <button type="button" data-filter="Nadiad" class="filter-pill" aria-pressed="false">Nadiad</button>
+          </div>
+        </div>
+        <p id="results-summary" class="results-summary" aria-live="polite">Showing 13 locations</p>
+        <div id="locations-grid" class="location-grid"></div>
+        <div class="empty-state" id="locations-empty" hidden><strong>No matching locations</strong><p>Try another neighborhood or select all locations.</p><button class="button button-outline" id="clear-search" type="button">Clear filters</button></div>
+        <p class="location-note">Branch names follow the <a href="https://qr2.me-qr.com/link-list/PR155wep/show" target="_blank" rel="noopener noreferrer">A.S. club’s QR location list ↗</a>. Photos illustrate the club atmosphere and may not depict the selected branch. For current hours and details, please contact the club directly.</p>
+      </div>
+    </section>
+
+    <section class="map-section" aria-labelledby="map-title">
+      <div class="container map-layout">
+        <div class="map-story"><p class="eyebrow"><span class="eyebrow-line"></span> AROUND THE CORNER</p><h2 class="section-title" id="map-title">Find your way <em>to the table.</em></h2><p>Pick a location from the list or a pin on the map. Then open Google Maps for turn-by-turn directions.</p><div class="map-selected" id="map-selected" aria-live="polite"><span>SELECTED CLUB</span><strong>Choose a location</strong></div><a href="#locations" class="text-link">Browse all clubs <span aria-hidden="true">↑</span></a></div>
+        <div class="map-panel"><div id="club-map" role="region" aria-label="Interactive map of club locations"><p class="map-fallback">The map needs a connection. Use the directions on each location card instead.</p></div><div class="map-footer"><span>Map pins are approximate; new branches without confirmed coordinates use directions links.</span><button id="map-fit" class="map-fit" type="button">View all locations ↗</button></div></div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container"><div class="section-head gallery-head"><div><p class="eyebrow"><span class="eyebrow-line"></span> A LOOK INSIDE</p><h2 class="section-title" id="gallery-title">A feel for <em>the game.</em></h2><p>A little closer to the tables, the rooms and the atmosphere.</p></div><div id="gallery-filters" class="filter-pills gallery-pills" role="group" aria-label="Filter gallery"><button data-gallery="all" aria-pressed="true" class="filter-pill is-active">All photos</button><button data-gallery="snooker" aria-pressed="false" class="filter-pill">Snooker</button><button data-gallery="pool" aria-pressed="false" class="filter-pill">Pool</button><button data-gallery="spaces" aria-pressed="false" class="filter-pill">Our spaces</button></div></div><div class="gallery-grid" id="gallery-grid"></div><p class="gallery-disclaimer">Gallery includes enhanced and AI-retouched images based on club photography. Final branch-specific photos should be confirmed before publication.</p></div>
+    </section>
+
+    <section class="visit-banner" aria-labelledby="visit-title"><div class="container visit-banner-inner"><div><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> THE NEXT FRAME IS YOURS</p><h2 id="visit-title">Bring your friends.<br><em>We'll see you at the table.</em></h2></div><a href="#locations" class="button button-accent">Find your nearest club <span aria-hidden="true">↗</span></a></div></section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-layout"><div><p class="eyebrow"><span class="eyebrow-line"></span> GET IN TOUCH</p><h2 class="section-title" id="contact-title">Something in <em>mind?</em></h2><p>Planning a group visit, an event, or a business collaboration? Tell us what you're thinking. Your message will open in your email app for you to review and send.</p><div class="contact-direct"><div><span>GENERAL ENQUIRIES</span><a href="mailto:arvindkhant3588@gmail.com">arvindkhant3588@gmail.com ↗</a></div><div><span>CLUB DIRECTIONS</span><a href="#locations">Browse locations & contact numbers ↗</a></div></div></div><form id="contact-form" class="contact-form"><div class="form-row"><label>Your name<input required name="name" autocomplete="name" placeholder="What should we call you?"></label><label>Type of enquiry<select name="type"><option value="Group visit">Group visit</option><option value="Tournament or event">Tournament or event</option><option value="Business or partnership">Business or partnership</option><option value="Other enquiry">Other enquiry</option></select></label></div><label>Your email<input required name="email" type="email" autocomplete="email" placeholder="you@example.com"></label><label>Your message<textarea required name="message" rows="5" placeholder="Tell us a little about your plans…"></textarea></label><button class="button button-accent form-submit" type="submit">Prepare email <span aria-hidden="true">↗</span></button><p class="form-note">Opens your email app. No information is submitted to this website.</p></form></div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer-upper"><div><a href="#top" class="brand footer-brand"><span class="brand-symbol" aria-hidden="true"><span class="brand-ball">8</span></span><span class="brand-name">A.S. <strong>POOL & SNOOKER</strong><small>CLUB</small></span></a><p>For the love of the game.<br>Find your table, bring your people.</p></div><div class="footer-nav"><div><span>EXPLORE</span><a href="#about">The experience</a><a href="#locations">Locations</a><a href="#gallery">Photo gallery</a></div><div><span>GET IN TOUCH</span><a href="#contact">Enquiries</a><a href="mailto:arvindkhant3588@gmail.com">Email us</a><a href="#locations">Find a club</a></div></div></div><div class="container footer-bottom"><span>© <span id="year"></span> A.S. Pool & Snooker Club</span><span>Made for the game. Built for the people.</span><a href="#top">Back to top ↑</a></div></footer>
+
+  <div class="club-dialog" id="club-dialog" hidden role="dialog" aria-modal="true" aria-labelledby="club-dialog-title"><div class="club-dialog-backdrop" data-close-club></div><div class="club-dialog-panel"><button type="button" class="club-dialog-close" id="club-dialog-close" aria-label="Close club details">×</button><div id="club-dialog-content"></div></div></div>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lightbox-title"><button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close gallery">×</button><button id="lightbox-prev" type="button" class="lightbox-arrow lightbox-prev" aria-label="Previous photo">‹</button><div class="lightbox-stage"><img id="lightbox-image" alt=""><div class="lightbox-caption"><span id="lightbox-count"></span><strong id="lightbox-title"></strong><p id="lightbox-description"></p></div></div><button id="lightbox-next" type="button" class="lightbox-arrow lightbox-next" aria-label="Next photo">›</button></div>
+  <div class="mobile-bottom"><a href="#locations">Find a club ↗</a><a href="#gallery">View photos</a></div>
+</body>
+</html>
