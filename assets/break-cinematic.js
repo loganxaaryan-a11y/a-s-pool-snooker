@@ -211,13 +211,15 @@
     function loop(now){
       if(mode!=='playing')return;
       if(!last)last=now;
-      const dt=Math.min(.035,(now-last)/1000);last=now;
-      clock+=dt;
-      // Fixed substeps avoid balls tunneling through the tightly packed rack.
-      const steps=Math.max(1,Math.ceil(dt/(1/180)));
-      for(let i=0;i<steps;i++)physics(dt/steps);
+      // Keep the break close to its intended duration even on slower devices.
+      // Fixed substeps still prevent balls tunneling through the rack.
+      const target=Math.min(2.55,Math.max(clock,(now-last)/1000));
+      while(clock+1e-6<target){
+        const step=Math.min(1/180,target-clock);
+        clock+=step;physics(step);
+      }
       paint();
-      if(clock>=2.55){
+      if(target>=2.55){
         finish();return;
       }
       frame=window.requestAnimationFrame(loop);
