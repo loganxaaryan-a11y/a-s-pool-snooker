@@ -62,3 +62,8 @@
 @media(max-width:900px){.break-section{padding:70px 0}.break-layout{grid-template-columns:1fr;gap:26px}.break-copy>p:not(.eyebrow){max-width:580px}}
 @media(max-width:565px){.break-section{padding:60px 0}.break-copy h2{font-size:clamp(36px,10vw,48px)}.break-stage{aspect-ratio:380/416;min-height:355px}.break-poster img{object-position:center 64%}.break-poster-foot{font-size:9px;left:18px;bottom:17px}.break-poster-action{right:17px;bottom:55px}.break-poster-action strong{font-size:16px}.break-poster-brand{left:18px;top:18px}.break-results-heading{align-items:start;flex-direction:column;gap:4px}.break-results-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.break-location{min-height:49px;padding:8px}.break-location-name{font-size:10.5px}}
 @media(prefers-reduced-motion:reduce){.break-poster,.break-poster img,.break-results{animation:none!important;transition:none!important}}
+
+/* Club identity: owner-supplied logo, framed for contrast on all backgrounds. */
+.club-logo{display:block;flex:none;width:50px;height:46px;object-fit:contain;border-radius:8px;border:1px solid #e6cd8e70;background:#a3acc5;box-shadow:0 3px 12px #0003}
+.footer-brand .club-logo{width:60px;height:55px}
+@media(max-width:590px){.brand{gap:8px}.brand .club-logo{width:42px;height:40px}.brand-name{font-size:12px}}

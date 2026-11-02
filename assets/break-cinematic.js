@@ -52,7 +52,7 @@
       const rowPitch=Math.sqrt(3)*r + 0.34;
       const spacing=2*r + 0.22;
       // An American 8-ball rack: the 8 is in the middle, the corner balls differ.
-      const order=[1,2,3,4,5,6,7,9,8,10,11,12,13,14,15];
+      const order=[1,10,3,6,8,14,12,7,2,15,4,13,5,9,11];
       let k=0;
       for(let row=0;row<5;row++){
         for(let pos=0;pos<=row;pos++){

@@ -8,18 +8,19 @@
   <meta property="og:title" content="A.S. Pool & Snooker Club | Your next game starts here">
   <meta property="og:description" content="Find your nearest A.S. Pool & Snooker Club. Explore locations, photos and directions.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/images/hero-hall.webp">
+  <meta property="og:image" content="https://loganxaaryan-a11y.github.io/a-s-pool-snooker/assets/images/hero-hall.webp">
+  <link rel="icon" type="image/jpeg" href="assets/images/as-club-logo.jpg">
   <title>A.S. Pool & Snooker Club | Find your club</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzxTGKn6uZbmxOyl5lEGwY2s7g=" crossorigin="">
   <link rel="preload" as="image" href="assets/images/hero-hall.webp">
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/site.css?v=client-2">
   <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script defer src="data/locations.js"></script>
-  <script defer src="assets/site.js"></script>
-  <script defer src="assets/break-cinematic.js"></script>
+  <script defer src="assets/site.js?v=client-2"></script>
+  <script defer src="assets/break-cinematic.js?v=client-2"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -27,7 +28,7 @@
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="A.S. Pool and Snooker Club home">
-        <span class="brand-symbol" aria-hidden="true"><span class="brand-ball">8</span></span>
+        <img class="club-logo" src="assets/images/as-club-logo.jpg" alt="" width="1124" height="1030">
         <span class="brand-name">A.S. <strong>POOL & SNOOKER</strong><small>CLUB</small></span>
       </a>
       <nav class="desktop-nav" aria-label="Main navigation">
@@ -157,7 +158,7 @@
     </section>
 
     <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
-      <div class="container"><div class="section-head gallery-head"><div><p class="eyebrow"><span class="eyebrow-line"></span> A LOOK INSIDE</p><h2 class="section-title" id="gallery-title">A feel for <em>the game.</em></h2><p>A little closer to the tables, the rooms and the atmosphere.</p></div><div id="gallery-filters" class="filter-pills gallery-pills" role="group" aria-label="Filter gallery"><button data-gallery="all" aria-pressed="true" class="filter-pill is-active">All photos</button><button data-gallery="snooker" aria-pressed="false" class="filter-pill">Snooker</button><button data-gallery="pool" aria-pressed="false" class="filter-pill">Pool</button><button data-gallery="spaces" aria-pressed="false" class="filter-pill">Our spaces</button></div></div><div class="gallery-grid" id="gallery-grid"></div><p class="gallery-disclaimer">Gallery includes enhanced and AI-retouched images based on club photography. Final branch-specific photos should be confirmed before publication.</p></div>
+      <div class="container"><div class="section-head gallery-head"><div><p class="eyebrow"><span class="eyebrow-line"></span> A LOOK INSIDE</p><h2 class="section-title" id="gallery-title">A feel for <em>the game.</em></h2><p>A little closer to the tables, the rooms and the atmosphere.</p></div><div id="gallery-filters" class="filter-pills gallery-pills" role="group" aria-label="Filter gallery"><button data-gallery="all" aria-pressed="true" class="filter-pill is-active">All photos</button><button data-gallery="snooker" aria-pressed="false" class="filter-pill">Snooker</button><button data-gallery="pool" aria-pressed="false" class="filter-pill">Pool</button><button data-gallery="spaces" aria-pressed="false" class="filter-pill">Our spaces</button></div></div><div class="gallery-grid" id="gallery-grid"></div><p class="gallery-disclaimer">Some images are AI-enhanced from club photography and may not show the selected branch.</p></div>
     </section>
 
     <section class="visit-banner" aria-labelledby="visit-title"><div class="container visit-banner-inner"><div><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> THE NEXT FRAME IS YOURS</p><h2 id="visit-title">Bring your friends.<br><em>We'll see you at the table.</em></h2></div><a href="#locations" class="button button-accent">Find your nearest club <span aria-hidden="true">↗</span></a></div></section>
@@ -165,7 +166,7 @@
     <section class="section contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-layout"><div><p class="eyebrow"><span class="eyebrow-line"></span> GET IN TOUCH</p><h2 class="section-title" id="contact-title">Something in <em>mind?</em></h2><p>Planning a group visit, an event, or a business collaboration? Tell us what you're thinking. Your message will open in your email app for you to review and send.</p><div class="contact-direct"><div><span>GENERAL ENQUIRIES</span><a href="mailto:arvindkhant3588@gmail.com">arvindkhant3588@gmail.com ↗</a></div><div><span>CLUB DIRECTIONS</span><a href="#locations">Browse locations & contact numbers ↗</a></div></div></div><form id="contact-form" class="contact-form"><div class="form-row"><label>Your name<input required name="name" autocomplete="name" placeholder="What should we call you?"></label><label>Type of enquiry<select name="type"><option value="Group visit">Group visit</option><option value="Tournament or event">Tournament or event</option><option value="Business or partnership">Business or partnership</option><option value="Other enquiry">Other enquiry</option></select></label></div><label>Your email<input required name="email" type="email" autocomplete="email" placeholder="you@example.com"></label><label>Your message<textarea required name="message" rows="5" placeholder="Tell us a little about your plans…"></textarea></label><button class="button button-accent form-submit" type="submit">Prepare email <span aria-hidden="true">↗</span></button><p class="form-note">Opens your email app. No information is submitted to this website.</p></form></div></section>
   </main>
 
-  <footer class="footer"><div class="container footer-upper"><div><a href="#top" class="brand footer-brand"><span class="brand-symbol" aria-hidden="true"><span class="brand-ball">8</span></span><span class="brand-name">A.S. <strong>POOL & SNOOKER</strong><small>CLUB</small></span></a><p>For the love of the game.<br>Find your table, bring your people.</p></div><div class="footer-nav"><div><span>EXPLORE</span><a href="#about">The experience</a><a href="#locations">Locations</a><a href="#gallery">Photo gallery</a></div><div><span>GET IN TOUCH</span><a href="#contact">Enquiries</a><a href="mailto:arvindkhant3588@gmail.com">Email us</a><a href="#locations">Find a club</a></div></div></div><div class="container footer-bottom"><span>© <span id="year"></span> A.S. Pool & Snooker Club</span><span>Made for the game. Built for the people.</span><a href="#top">Back to top ↑</a></div></footer>
+  <footer class="footer"><div class="container footer-upper"><div><a href="#top" class="brand footer-brand"><img class="club-logo" src="assets/images/as-club-logo.jpg" alt="" width="1124" height="1030"><span class="brand-name">A.S. <strong>POOL & SNOOKER</strong><small>CLUB</small></span></a><p>For the love of the game.<br>Find your table, bring your people.</p></div><div class="footer-nav"><div><span>EXPLORE</span><a href="#about">The experience</a><a href="#locations">Locations</a><a href="#gallery">Photo gallery</a></div><div><span>GET IN TOUCH</span><a href="#contact">Enquiries</a><a href="mailto:arvindkhant3588@gmail.com">Email us</a><a href="#locations">Find a club</a></div></div></div><div class="container footer-bottom"><span>© <span id="year"></span> A.S. Pool & Snooker Club</span><span>Made for the game. Built for the people.</span><a href="#top">Back to top ↑</a></div></footer>
 
   <div class="club-dialog" id="club-dialog" hidden role="dialog" aria-modal="true" aria-labelledby="club-dialog-title"><div class="club-dialog-backdrop" data-close-club></div><div class="club-dialog-panel"><button type="button" class="club-dialog-close" id="club-dialog-close" aria-label="Close club details">×</button><div id="club-dialog-content"></div></div></div>
 
